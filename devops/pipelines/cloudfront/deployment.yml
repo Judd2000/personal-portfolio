@@ -10,7 +10,7 @@ stages:
         - task: AWSShellScript@1
           displayName: 'Do nothing'
           inputs:
-            awsCredentials: AwsServiceConnection
+            awsCredentials: AWSServiceConnection
             regionName: us-west-2
             failOnStandardError: true
             scriptSource: inlineScript
