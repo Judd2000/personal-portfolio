@@ -7,7 +7,7 @@ stages:
     jobs:
     - job: 'Deploy'
       steps:
-      task: AWSShellScript@1
-      inline_script: |
-        echo "ECHO"
-        aws sts get-caller-identity
+        - task: AWSShellScript@1
+          inline_script: |
+            echo "ECHO"
+            aws sts get-caller-identity
