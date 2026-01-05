@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild --bundle --outfile=./dist/index.js --platform=node --target=node20 ./src/lambda.ts",
+    "zip": "zip -j lambda.zip dist/index.js",
+    "update": "aws lambda update-function-code --zip-file fileb://lambda.zip --function-name hello",
+    "deploy": "run-s build zip update",
+    "dev": "tsx watch ./src/dev.ts"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.159",
+    "@types/node": "^25.0.3",
+    "@types/nodemailer": "^7.0.4",
+    "esbuild": "^0.21.4",
+    "nodemailer": "^7.0.12",
+    "npm-run-all2": "^6.2.0"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.7",
+    "dotenv": "^17.2.3",
+    "hono": "^4.11.3"
+  }
+}

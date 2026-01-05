@@ -1,25 +1,21 @@
 {
-  "name": "Portfolio",
+  "name": "portfolio",
   "version": "1.0.0",
-  "private": true,
-  "type": "module",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "rsbuild build",
-    "dev": "rsbuild dev --open",
-    "preview": "rsbuild preview"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "turbo dev",
+    "build": "turbo build"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.4",
   "dependencies": {
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
-    "react-router-dom": "^7.11.0"
-  },
-  "devDependencies": {
-    "@rsbuild/core": "^1.6.14",
-    "@rsbuild/plugin-react": "^1.4.2",
-    "@tailwindcss/postcss": "^4.1.18",
-    "@types/react": "^19.2.7",
-    "@types/react-dom": "^19.2.3",
-    "tailwindcss": "^4.1.18",
+    "@rsbuild/core": "^1.7.1",
+    "mui-tel-input": "^9.0.1",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }
 }

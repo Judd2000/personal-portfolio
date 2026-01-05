@@ -14,3 +14,14 @@ dist/
 .vscode/*
 !.vscode/extensions.json
 .idea
+
+# Turbo
+turbo.json
+
+# Environment
+**/.env
+**/.tfvars
+
+# Terraform locals
+**/.terraform
+**/.terraform.lock.hcl

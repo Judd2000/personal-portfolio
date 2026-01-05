@@ -1,0 +1,32 @@
+{
+  "name": "@portfolio/site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "../../node_modules/.bin/rsbuild build",
+    "dev": "../../node_modules/.bin/rsbuild dev --open",
+    "preview": "../../node_modules/.bin/rsbuild preview"
+  },
+  "dependencies": {
+    "@better-fetch/fetch": "^1.1.21",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.6",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.11.0",
+    "react-toastify": "^11.0.5"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^1.6.14",
+    "@rsbuild/plugin-react": "^1.4.2",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/node": "^25.0.3",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3"
+  }
+}
