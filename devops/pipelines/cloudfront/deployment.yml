@@ -3,10 +3,10 @@ variables:
   - group: 'cloudfront-vars'
 
 stages:
-  stage: 'AWS_Deploy'
-  jobs:
-    job: 'Deploy'
-    steps:
+  - stage: 'AWS_Deploy'
+    jobs:
+    - job: 'Deploy'
+      steps:
       task: AWSShellScript@1
       inline_script: |
         echo "ECHO"
