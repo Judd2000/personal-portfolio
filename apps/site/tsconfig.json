@@ -7,7 +7,6 @@
     "skipLibCheck": true,
     "useDefineForClassFields": true,
     "allowImplicitAny": true,
-
     /* modules */
     "module": "ESNext",
     "moduleDetection": "force",

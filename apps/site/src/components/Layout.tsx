@@ -1,6 +1,6 @@
 import {Outlet, useNavigate} from 'react-router-dom';
 import linkedInIcon from '../assets/LinkedIn_icon.svg';
-import { useState, MouseEvent, useEffect } from "react";
+import { useState, type MouseEvent, useEffect } from "react";
 import SendMessage from "./SendMessage";
 import { toast, ToastContainer, Slide } from "react-toastify";
 import {Size, useScreenSize} from "../hooks/useScreenSize";
@@ -60,8 +60,8 @@ const Layout = () => {
         <div
             className="min-h-screen bg-linear-to-t from-gray-600 to-gray-200 flex flex-col overflow-x-none min-w-fit max-w-screen">
             <nav className="bg-gray-800 flex justify-between items-stretch px-2 py-4">
-                <div className="flex flex-row gap-x-3 sm:gap-x-5 items-center">
-                    <a href="/" className="text-2xl sm:text-4xl h-full">Nathaniel Judd</a>
+                <div className="flex flex-row gap-x-3 sm:gap-x-5 items-center w-fit" onClick={() => navigate('/')}>
+                    <span className="text-2xl sm:text-4xl h-full">Nathaniel Judd</span>
                     <CodeIcon fontSize={ screenSize <= Size.sm ? 'medium' : 'large' } />
                 </div>
                 { screenSize <= Size.sm && (

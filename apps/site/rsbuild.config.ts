@@ -3,5 +3,15 @@ import { pluginReact } from '@rsbuild/plugin-react';
 
 // Docs: https://rsbuild.rs/config/
 export default defineConfig({
-    plugins: [pluginReact()]
+    plugins: [pluginReact()],
+    tools: {
+        rspack(config, { addRules }) {
+            addRules([
+                {
+                    test: /\.pdf$/,
+                    type: 'asset/resource'
+                }
+            ]);
+        }
+    }
 });
