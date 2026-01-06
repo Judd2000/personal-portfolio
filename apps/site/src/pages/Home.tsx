@@ -55,7 +55,7 @@ const Home = () => {
                 </div>
                 <span className="h-full bg-gray-800 text-xl rounded-lg p-2 mt-8">
                         <b><i>I am open for work!</i></b>  I am interested in developing in many different
-                        programming languages, frameworks. and environments. I am also interested in CI/CD positions
+                        programming languages, frameworks and environments. I am also interested in CI/CD positions
                         and dev ops roles. If you would like to contact me about opportunities, please use the "Send a Message"
                         feature to email me, or see the Contact Me section in the bottom footer.
                 </span>

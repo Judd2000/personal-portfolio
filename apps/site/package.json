@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "../../node_modules/.bin/rsbuild build",
-    "dev": "../../node_modules/.bin/rsbuild dev --open",
-    "preview": "../../node_modules/.bin/rsbuild preview"
+    "build": "rsbuild build",
+    "dev": "rsbuild dev --open",
+    "preview": "rsbuild preview"
   },
   "dependencies": {
     "@better-fetch/fetch": "^1.1.21",
