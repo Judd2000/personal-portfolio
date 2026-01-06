@@ -151,7 +151,7 @@ export const SendMessage = ({
 
     return (
         <div className="fixed min-h-screen z-10 w-screen flex justify-center items-center top-0 left-0 bg-black/75">
-            <div className="bg-white p-4 relative md:w-1/2 sm:w-full my-2"
+            <div className="bg-white p-4 relative md:w-1/2 w-4/5 my-2"
                  onClick={(e) => e.stopPropagation()}
             >
                 <div className="flex flex-col gap-4">
@@ -205,7 +205,8 @@ export const SendMessage = ({
                                 input: {
                                     inputComponent: TextareaAutosize,
                                     inputProps: {
-                                        minRows: 5,
+                                        minRows: 3,
+                                        maxRows: 8
                                     }
                                 }
                             }
