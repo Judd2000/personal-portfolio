@@ -6,6 +6,7 @@
     "noEmit": true,
     "skipLibCheck": true,
     "useDefineForClassFields": true,
+    "allowImplicitAny": true,
 
     /* modules */
     "module": "ESNext",
@@ -23,6 +24,6 @@
     "noUnusedParameters": true
   },
   "include": [
-    "../../src"
+    "src/**/*"
   ]
 }

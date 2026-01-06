@@ -98,10 +98,12 @@ const Layout = () => {
                 }}
             >
                 { routes.map((route) => (
-                    <MenuItem onClick={() => {
-                        setShowDropdown(false);
-                        route.onClick();
-                    }} >{ route.name }</MenuItem>
+                    <MenuItem
+                        key={ route.name }
+                        onClick={() => {
+                            setShowDropdown(false);
+                            route.onClick();
+                        }} >{ route.name }</MenuItem>
                 ))}
             </Menu>
             {showMessage && (

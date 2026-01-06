@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useState } from 'react'
+import { type Dispatch, type SetStateAction, useState } from 'react'
 import { IoClose } from 'react-icons/io5';
 import { Button, FilledInput, InputAdornment, TextareaAutosize, TextField } from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -47,7 +47,7 @@ export const SendMessage = ({
 
     let timeoutId: NodeJS.Timeout;
 
-    const throttleButton = (e, callback) => {
+    const throttleButton = (callback: () => Promise<void>) => {
         if (timeoutId) {
             clearTimeout(timeoutId);
         }
@@ -96,7 +96,7 @@ export const SendMessage = ({
         setIsLoading(false);
     }
 
-    const onContactChange = (enteringPhone, contactChange?: any) => {
+    const onContactChange = (enteringPhone: boolean, contactChange?: any) => {
         if (contactChange) setContactInfo(contactChange.target.value);
         const newContactValue = contactChange ? contactChange.target.value : contactInfo
         if (!newContactValue) return;
@@ -109,7 +109,7 @@ export const SendMessage = ({
         }
     }
 
-    const onNameChange = (nameChange) => {
+    const onNameChange = (nameChange: any) => {
         setInvalidName(!nameChange.target.value.length)
         setName(nameChange.target.value);
     }
@@ -119,9 +119,14 @@ export const SendMessage = ({
         onContactChange(!isEnteringPhone);
     }
 
-    const onSendPressed = async (context) => {
-        throttleButton(context, async () => {
-            console.log('Callback called.')
+    const onSendFailed = (error: any) => {
+        console.error(error);
+        onMessageFailure();
+        setIsLoading(false);
+    };
+
+    const onSendPressed = async () => {
+        throttleButton(async () => {
             const readyForSubmit = name && !invalidName && contactInfo && !invalidContact && messageText && !invalidMessage;
             if (readyForSubmit) {
                 if (import.meta.env.PUBLIC_DISABLED_MESSAGE) {
@@ -132,16 +137,13 @@ export const SendMessage = ({
                 try {
                     const { error } = await messageApi.sendMessage(name, contactInfo, messageText, isEnteringPhone);
                     if (error) {
-                        onMessageFailure();
-                        setIsLoading(false);
+                        onSendFailed(error);
                     } else {
                         onMessageSuccess();
                         closeMessageModal();
                     }
                 } catch (e) {
-                    console.error(e);
-                    onMessageFailure();
-                    setIsLoading(false);
+                    onSendFailed(e);
                 }
             }
         });
@@ -221,7 +223,7 @@ export const SendMessage = ({
                     <div className="flex gap-4 mt-4">
                         <button
                             className="bg-blue-950  text-white px-4 py-2 rounded-2xl hover:bg-blue-900 cursor-pointer w-35"
-                            onClick={onSendPressed}
+                            onClick={() => onSendPressed()}
                             disabled={sendDisabled}
                         >{isLoading ? <CircularProgress size={10}/> : 'Send Message'}</button>
                         <button className="px-4 py-2 rounded-2xl hover:bg-gray-400 bg-gray-600 cursor-pointer"
