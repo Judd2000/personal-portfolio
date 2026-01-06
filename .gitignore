@@ -17,6 +17,7 @@ dist/
 
 # Turbo
 turbo.json
+**/.turbo
 
 # Environment
 **/.env

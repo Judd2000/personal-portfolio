@@ -1,6 +1,6 @@
 import {Outlet, useNavigate} from 'react-router-dom';
 import linkedInIcon from '../assets/LinkedIn_icon.svg';
-import { useState, MouseEvent } from "react";
+import { useState, MouseEvent, useEffect } from "react";
 import SendMessage from "./SendMessage";
 import { toast, ToastContainer, Slide } from "react-toastify";
 import {Size, useScreenSize} from "../hooks/useScreenSize";
@@ -32,7 +32,6 @@ const Layout = () => {
         setShowDropdown(true);
     };
 
-    // Used in conjunction with md: and sm: selectors in the styling.
     const screenSize = useScreenSize();
 
 
@@ -47,6 +46,14 @@ const Layout = () => {
     const onMessageDisabled = () => {
         toast.error("This feature has been temporarily disabled.");
     }
+
+    useEffect(() => {
+        if  (showMessage) {
+            document.body.classList.add('overflow-y-hidden');
+        } else {
+            document.body.classList.remove('overflow-y-hidden');
+        }
+    }, [showMessage]);
 
     return (
         <div
