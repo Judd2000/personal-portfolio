@@ -26,7 +26,6 @@ const Home = () => {
     const aboutContent = <>
         <b>About Me:</b>
         <br />
-        <br />
         I am the oldest of 4 children. As you can see, I am a lone Blonde in a sea of Red.
         <br />
         I grew up in the Pacific Northwest, briefly spending time
@@ -50,7 +49,7 @@ const Home = () => {
         <div>
             <span className="text-4xl w-full text-center block py-4 font-bold text-gray-800">HOME</span>
             <div className="flex flex-col space-y-12 items-center overflow-auto">
-                <div className="flex flex-col sm:flex-row mx-4 sm:mx-12 sm:space-x-8 items-center">
+                <div className="flex flex-col sm:flex-row mx-4 sm:mx-16 sm:space-x-8 items-center">
                     <img src={image} alt="picture of Nathaniel Judd"
                          className="rounded-full w-1/3 md:w-1/4"
                     />
@@ -59,7 +58,7 @@ const Home = () => {
                     </span>
                 </div>
 
-                <div className="flex flex-col sm:flex-row sm:space-x-8 items-center mx-4 sm:mx-12">
+                <div className="flex flex-col sm:flex-row sm:space-x-8 items-center mx-4 sm:mx-16">
                     <img src={famImage} alt="picture of Nathaniel Judd with family"
                          className="rounded-lg w-1/2 sm:w-1/4 h-fit"
                     />
@@ -67,7 +66,7 @@ const Home = () => {
                         { aboutContent }
                     </span>
                 </div>
-                <span className="h-full bg-gray-800 text-lg sm:text-xl rounded-lg p-2 mt-8 mx-4 sm:mx-12">
+                <span className="h-full bg-gray-800 text-lg sm:text-xl rounded-lg p-2 mt-8 mx-4 sm:mx-16">
                     { openForWorkContent }
                 </span>
             </div>

@@ -18,7 +18,7 @@ data "aws_cloudfront_origin_request_policy" "origin_request_policy" {
 
 data "aws_acm_certificate" "njudd_issued" {
   provider = aws.eastern
-  domain = "njuddportfolio.com"
+  domain   = "njuddportfolio.com"
   statuses = ["ISSUED"]
 }
 
@@ -33,9 +33,18 @@ resource "aws_cloudfront_distribution" "site_distribution" {
 
   aliases = ["njuddportfolio.com"]
 
+  default_root_object = local.index
+
+  custom_error_response {
+    error_caching_min_ttl = 10
+    error_code            = 403
+    response_code         = 200
+    response_page_path    = "/${local.index}"
+  }
+
   viewer_certificate {
     acm_certificate_arn = data.aws_acm_certificate.njudd_issued.arn
-    ssl_support_method = "sni-only"
+    ssl_support_method  = "sni-only"
   }
 
   restrictions {

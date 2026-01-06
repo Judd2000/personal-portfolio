@@ -7,6 +7,7 @@ import {Size, useScreenSize} from "../hooks/useScreenSize";
 // import LunchDiningIcon from '@mui/icons-material/LunchDining';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import CodeIcon from '@mui/icons-material/Code';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
@@ -59,7 +60,10 @@ const Layout = () => {
         <div
             className="min-h-screen bg-linear-to-t from-gray-600 to-gray-200 flex flex-col overflow-x-none min-w-fit max-w-screen">
             <nav className="bg-gray-800 flex justify-between items-stretch px-2 py-4">
-                <a href="/" className="text-2xl sm:text-4xl h-full">Nathaniel Judd</a>
+                <div className="flex flex-row gap-x-3 sm:gap-x-5 items-center">
+                    <a href="/" className="text-2xl sm:text-4xl h-full">Nathaniel Judd</a>
+                    <CodeIcon fontSize={ screenSize <= Size.sm ? 'medium' : 'large' } />
+                </div>
                 { screenSize <= Size.sm && (
                         <button
                             className="active:bg-gray-600 px-4 rounded-md"
