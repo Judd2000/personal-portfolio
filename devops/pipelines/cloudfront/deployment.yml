@@ -28,7 +28,7 @@ stages:
               
               sudo apt update
               
-              sudo apt-get install terraform
+              sudo apt-get -y install terraform
               
               terraform -help
 
