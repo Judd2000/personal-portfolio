@@ -7,7 +7,6 @@ trigger:
       - main
   paths:
     include:
-      - devops/pipelines/site/deployment.yml
       - devops/terraform/site/*
       - apps/site/*
 
@@ -49,7 +48,7 @@ stages:
       - job: 'Deploy'
         steps:
           - task: AWSShellScript@1
-            displayName: 'Deploy Server to AWS'
+            displayName: 'Deploy Site to AWS'
             inputs:
               awsCredentials: AWSServiceConnection
               regionName: us-west-2

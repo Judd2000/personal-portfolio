@@ -7,7 +7,6 @@ trigger:
       - main
   paths:
     include:
-      - devops/pipelines/server/deployment.yml
       - devops/terraform/server/*
       - apps/server/*
 
@@ -61,6 +60,10 @@ stages:
     jobs:
       - job: 'Deploy'
         steps:
+          - task: DownloadBuildArtifacts@1
+            inputs:
+              artifactName: 'server_drop'
+              downloadType: 'single'
           - task: AWSShellScript@1
             displayName: 'Deploy Server to AWS'
             inputs:
@@ -91,6 +94,6 @@ stages:
                 terraform plan -out=tfplan -input=false -var 'ALT_FRONTEND_URL=$(ALT_FRONTEND_URL)' \
                 -var 'API_KEY=$(API_KEY)' -var 'APP_PASSWORD=$(APP_PASSWORD)' -var 'SENDER_EMAIL=$(SENDER_EMAIL)' \
                 -var 'MESSAGE_RECIPIENT_EMAIL=$(MESSAGE_RECIPIENT_EMAIL)' -var 'FRONTEND_URL=$(FRONTEND_URL)' \
-                -var 'ALT_FRONTEND_URL=$(ALT_FRONTEND_URL)' -var 'WORKING_DIR=$(System.DefaultWorkingDirectory)'
+                -var 'ALT_FRONTEND_URL=$(ALT_FRONTEND_URL)' -var 'WORKING_DIR=$(System.ArtifactsDirectory)'
                 
                 terraform apply -input=false tfplan
