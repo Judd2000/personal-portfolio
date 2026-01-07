@@ -47,6 +47,10 @@ stages:
     jobs:
       - job: 'Deploy'
         steps:
+          - task: DownloadBuildArtifacts@1
+            inputs:
+              artifactName: 'site_drop'
+              downloadType: 'single'
           - task: AWSShellScript@1
             displayName: 'Deploy Site to AWS'
             inputs:
@@ -74,6 +78,6 @@ stages:
                 
                 terraform init -input=false
                 
-                terraform plan -out=tfplan -input=false -var 'WORKING_DIR=$(System.DefaultWorkingDirectory)'
+                terraform plan -out=tfplan -input=false -var 'WORKING_DIR=$(System.ArtifactsDirectory)'
                 
                 terraform apply -input=false tfplan
