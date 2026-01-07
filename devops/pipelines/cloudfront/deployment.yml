@@ -30,5 +30,5 @@ stages:
               
               sudo apt-get install terraform
               
-              terraform --version
+              terraform -help
 
