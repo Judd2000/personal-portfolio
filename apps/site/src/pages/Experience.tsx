@@ -1,6 +1,11 @@
 import Resume from '../assets/Nathaniel_Judd_Resume.pdf';
+import DownloadIcon from '@mui/icons-material/Download';
+import { Size, useScreenSize } from "../hooks/useScreenSize.ts";
 
 const Experience = () => {
+
+
+    const screenSize = useScreenSize();
 
     return (
         <div className="h-full">
@@ -9,8 +14,9 @@ const Experience = () => {
                 <span className="text-2xl sm:text-4xl text-center block py-4 font-bold text-gray-800">Experience</span>
                 <div className="flex-1 flex justify-end">
                     <button
-                        className="bg-blue-950  text-white p-[4px] sm:p-2 rounded-2xl hover:bg-blue-900 hover:underline active:bg-blue-900 active:underline cursor-pointer mr-4 w-fit">
-                        <a href={Resume} className="text-[10px] sm:text-sm">Download Resume</a>
+                        className="bg-blue-950  text-white p-[4px] sm:p-2 rounded-2xl hover:bg-blue-900 hover:underline active:bg-blue-900 active:underline cursor-pointer mr-4 w-fit flex flex-row items-center">
+                        <DownloadIcon fontSize={ screenSize <= Size.sm ? 'small' : 'medium' }/>
+                        <a href={Resume} className="text-[10px] sm:text-sm">Resume</a>
                     </button>
                 </div>
             </div>
