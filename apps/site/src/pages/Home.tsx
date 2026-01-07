@@ -46,7 +46,7 @@ const Home = () => {
     </>;
 
     return (
-        <div>
+        <div className="bg-linear-to-t from-gray-600 to-gray-200 pb-10">
             <span className="text-4xl w-full text-center block py-4 font-bold text-gray-800">HOME</span>
             <div className="flex flex-col space-y-12 items-center overflow-auto">
                 <div className="flex flex-col sm:flex-row mx-4 sm:mx-16 sm:space-x-8 items-center">

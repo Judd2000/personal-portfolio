@@ -58,7 +58,7 @@ const Layout = () => {
 
     return (
         <div
-            className="min-h-screen bg-linear-to-t from-gray-600 to-gray-200 flex flex-col overflow-x-none min-w-fit max-w-screen">
+            className="min-h-screen flex flex-col overflow-x-none min-w-fit max-w-screen">
             <nav className="bg-gray-800 flex justify-between items-stretch px-2 py-4">
                 <div className="flex flex-row gap-x-3 sm:gap-x-5 items-center w-fit" onClick={() => navigate('/')}>
                     <span className="text-2xl sm:text-4xl h-full">Nathaniel Judd</span>
@@ -126,7 +126,7 @@ const Layout = () => {
             <ToastContainer position="bottom-right" transition={Slide} autoClose={throttleTime}/>
 
             <footer
-                className="bg-gray-800 text-gray-200 py-4 mt-10 flex justify-between items-center gap-4 px-2 sm:px-10 bottom-0 w-full"
+                className="bg-gray-800 text-gray-200 py-4 flex justify-between items-center gap-4 px-2 sm:px-10 bottom-0 w-full"
             >
                 <span className="text-sm sm:text-md">© 2025 Nathaniel Judd. All rights reserved.</span>
                 <span className="text-sm sm:text-md">
