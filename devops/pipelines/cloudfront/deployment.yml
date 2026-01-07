@@ -19,7 +19,7 @@ stages:
     - job: 'Deploy'
       steps:
         - task: AWSShellScript@1
-          displayName: 'Do nothing'
+          displayName: 'Deploy Cloudfront & S3 to AWS'
           inputs:
             awsCredentials: AWSServiceConnection
             regionName: us-west-2
@@ -48,4 +48,3 @@ stages:
               terraform plan -out=tfplan -input=false -var 'AWS_ACCOUNT_ID=$(AWS_ACCOUNT_ID)'
               
               terraform apply -input=false tfplan
-

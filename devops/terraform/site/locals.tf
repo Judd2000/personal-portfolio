@@ -1,5 +1,6 @@
 locals {
   s3_bucket_name = "site-njudd-s3"
+  file_path = "${var.WORKING_DIR}/site_drop"
   content_type_map = {
     html = "text/html",
     css  = "text/css",

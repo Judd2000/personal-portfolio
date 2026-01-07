@@ -36,12 +36,6 @@ resource "aws_iam_role_policy" "lambda_logging" {
   })
 }
 
-data "archive_file" "server_zip" {
-  type        = "zip"
-  source_file = "${var.WORKING_DIR}/apps/server/dist/index.js"
-  output_path = "${var.WORKING_DIR}/apps/server/function.zip"
-}
-
 resource "aws_cloudwatch_log_group" "server_logs" {
   name              = "/aws/lambda/${local.lambda_function_name}"
   retention_in_days = 14
@@ -53,10 +47,9 @@ resource "aws_cloudwatch_log_group" "server_logs" {
 
 resource "aws_lambda_function" "server" {
   function_name = local.lambda_function_name
-  filename      = data.archive_file.server_zip.output_path
+  filename      = local.lambda_path
   handler       = "index.handler"
   role          = aws_iam_role.lambda-role.arn
-  source_code_hash = data.archive_file.server_zip.output_base64sha256
 
   runtime = "nodejs20.x"
 
