@@ -9,9 +9,7 @@ export enum Size {
 }
 
 export const useScreenSize = () => {
-    const [screenSize, setScreenSize] = useState<
-        Size
-    >(Size.none);
+    const [screenSize, setScreenSize] = useState<Size>(Size.none);
 
     useEffect(() => {
         const handleResize = () => {

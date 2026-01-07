@@ -16,6 +16,7 @@ dist/
 .idea
 
 # Turbo
+.turbo
 **/.turbo
 **/tfplan
 
