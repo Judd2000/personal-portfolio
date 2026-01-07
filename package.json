@@ -17,6 +17,7 @@
     "@rsbuild/core": "^1.7.1",
     "mui-tel-input": "^9.0.1",
     "tsx": "^4.21.0",
+    "turbo": "^2.7.3",
     "typescript": "^5.9.3"
   }
 }
