@@ -41,7 +41,7 @@ stages:
               
               sudo apt-get -y install terraform
               
-              cd $(System.DefaultWorkingDirectory)
+              cd $(System.DefaultWorkingDirectory)/devops/terraform/cloudfront
               
               terraform init -input=false
               
