@@ -91,6 +91,6 @@ stages:
                 terraform plan -out=tfplan -input=false -var 'ALT_FRONTEND_URL=$(ALT_FRONTEND_URL)' \
                 -var 'API_KEY=$(API_KEY)' -var 'APP_PASSWORD=$(APP_PASSWORD)' -var 'SENDER_EMAIL=$(SENDER_EMAIL)' \
                 -var 'MESSAGE_RECIPIENT_EMAIL=$(MESSAGE_RECIPIENT_EMAIL)' -var 'FRONTEND_URL=$(FRONTEND_URL)' \
-                -var 'ALT_FRONTEND_URL=$(ALT_FRONTEND_URL)'
+                -var 'ALT_FRONTEND_URL=$(ALT_FRONTEND_URL)' -var 'WORKING_DIR=$(System.DefaultWorkingDirectory)'
                 
                 terraform apply -input=false tfplan

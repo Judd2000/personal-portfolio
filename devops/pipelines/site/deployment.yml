@@ -75,6 +75,6 @@ stages:
                 
                 terraform init -input=false
                 
-                terraform plan -out=tfplan -input=false -var 'ALT_FRONTEND_URL=$(ALT_FRONTEND_URL)'
+                terraform plan -out=tfplan -input=false -var 'WORKING_DIR=$(System.DefaultWorkingDirectory)'
                 
                 terraform apply -input=false tfplan
