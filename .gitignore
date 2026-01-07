@@ -16,7 +16,6 @@ dist/
 .idea
 
 # Turbo
-turbo.json
 **/.turbo
 **/tfplan
 
