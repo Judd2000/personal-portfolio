@@ -37,7 +37,7 @@ stages:
           - script: |
               pnpm install
               
-              pnpm build --filter=@amulek/core
+              pnpm build --filter=@portfolio/server
             displayName: 'pnpm install and build'
           - task: ArchiveFiles@2
             displayName: Zip App
