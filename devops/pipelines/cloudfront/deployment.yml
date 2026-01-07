@@ -1,4 +1,15 @@
 # steps: run terraform
+pr: none
+
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - devops/pipelines/cloudfront/deployment.yml
+      - devops/terraform/cloudfront/*
+
 variables:
   - group: 'cloudfront-vars'
 
@@ -30,5 +41,11 @@ stages:
               
               sudo apt-get -y install terraform
               
-              terraform -help
+              cd $(System.DefaultWorkingDirectory)
+              
+              terraform init -input=false
+              
+              terraform plan -out=tfplan -input=false -var 'AWS_ACCOUNT_ID=$(AWS_ACCOUNT_ID)'
+              
+              terraform apply -input=false tfplan
 

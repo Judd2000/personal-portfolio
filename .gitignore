@@ -18,6 +18,7 @@ dist/
 # Turbo
 turbo.json
 **/.turbo
+**/tfplan
 
 # Environment
 **/.env
