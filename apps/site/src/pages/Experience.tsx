@@ -135,8 +135,14 @@ const Experience = () => {
                     visualization. Created test cases and wrote unit tests with high levels of coverage.
                     Product manager was a developer at Adobe and our work was integrated into their library after 1 semester.
                 </span>
-            </div>
 
+                <hr className="h-2 border-gray-700"/>
+                <span className="text-lg text-gray-700 py-4">CERTIFICATIONS:</span>
+                <hr className="h-2 border-gray-700 pb-4"/>
+
+                <span className="text-md text-gray-700">Amazon Web Services Cloud Practicioner</span>
+                <span className="text-sm text-gray-500 pb-6">January 2026 - January 2029</span>
+            </div>
         </div>
     )
 };
