@@ -16,11 +16,11 @@ data "aws_cloudfront_origin_request_policy" "origin_request_policy" {
   name = "Managed-CORS-S3Origin"
 }
 
-# data "aws_acm_certificate" "njudd_issued" {
-#   provider = aws.eastern
-#   domain   = "njuddportfolio.com"
-#   statuses = ["ISSUED"]
-# }
+data "aws_acm_certificate" "njudd_issued" {
+  provider = aws.eastern
+  domain   = "njuddportfolio.com"
+  statuses = ["ISSUED"]
+}
 
 resource "aws_cloudfront_distribution" "site_distribution" {
   origin {
@@ -42,10 +42,10 @@ resource "aws_cloudfront_distribution" "site_distribution" {
     response_page_path    = "/${local.index}"
   }
 
-  # viewer_certificate {
-  #   acm_certificate_arn = data.aws_acm_certificate.njudd_issued.arn
-  #   ssl_support_method  = "sni-only"
-  # }
+  viewer_certificate {
+    acm_certificate_arn = data.aws_acm_certificate.njudd_issued.arn
+    ssl_support_method  = "sni-only"
+  }
 
   restrictions {
     geo_restriction {
