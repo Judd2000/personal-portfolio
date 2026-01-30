@@ -1,4 +1,4 @@
-import PortfolioPageCode from '../assets/PortfolioPage_Code.png';
+import WebsiteDiagram from '../assets/Website_Diagram.png';
 
 const Projects = () => {
 
@@ -16,11 +16,10 @@ const Projects = () => {
                         automatically deployed with Terraform IaC and Azure DevOps Pipelines.
                     </span>
                     <span className="font-bold text-md sm:text-lg text-gray-700">
-                        See the code&#8200;
-                        <a href="https://github.com/Judd2000/personal-portfolio.git" target="_blank" className="underline">HERE</a>
+                        <a href="https://github.com/Judd2000/personal-portfolio.git" target="_blank" className="underline">See the code</a>
                         &#8200;(GitHub)
                     </span>
-                    <img src={PortfolioPageCode} className="w-full md:w-1/2" />
+                    <img src={WebsiteDiagram} className="w-full md:w-1/2" />
                 </li>
             </ul>
         </div>
