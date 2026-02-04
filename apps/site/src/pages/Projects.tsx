@@ -3,7 +3,7 @@ import WebsiteDiagram from '../assets/Website_Diagram.png';
 const Projects = () => {
 
     return (
-        <div className="h-full">
+        <div className="h-full ">
             <span className="text-2xl sm:text-4xl text-center block py-4 font-bold text-gray-800">Personal Projects</span>
             <ul className="list-disc px-4">
                 <li className="flex flex-col">
