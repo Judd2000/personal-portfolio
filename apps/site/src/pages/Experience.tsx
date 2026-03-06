@@ -36,15 +36,15 @@ const Experience = () => {
                 <hr className="h-2 border-gray-700"/>
                 <span className="text-lg text-gray-700 py-4">WORK EXPERIENCE:</span>
                 <hr className="border-gray-700 pb-4"/>
-                <span className="text-lg text-gray-700">Contract Full-Stack Developer @ Church of Jesus Christ of Latter-day Saints</span>
+                <span className="text-lg text-gray-700">Contract Full-Stack Developer @ Global Education Technologies</span>
                 <span className="text-sm text-gray-500">April 2024 - January 2026</span>
                 <span className="text-md text-gray-700">
                     Duties:
                     <br/>
-                    Worked as a contract full-stack developer for church technology operations, delivering
-                    and maintaining a new web and android application for volunteer church missionaries.
-                    Performed all CI/CD tasks for the team, creating a streamlined and consistent
-                    deployment process.
+                    Worked as a contract full-stack developer, delivering and maintaining
+                    a new web and android application for volunteer management.
+                    Integrated chatbot features with Open AI, and performed all CI/CD tasks for the team,
+                    creating a streamlined and consistent deployment process.
                 </span>
                 <span className="text-md text-gray-700 pt-4">Key Projects:</span>
                 <ul className="list-disc px-2 text-gray-600 pb-4">
@@ -66,13 +66,16 @@ const Experience = () => {
                         synchronization seamless across non-production and production lanes.
                     </li>
                     <li>
+                        Implemented microservice architecture between several frontends using module federation.
+                    </li>
+                    <li>
                         Created new features such as a feedback page supporting file uploads, a rating system for
                         AI-generated support messages for our application, and more (React.js, TypeScript, Express.js,
                         PostgreSQL).
                     </li>
                 </ul>
                 <hr className="border-gray-700 pb-4"/>
-                <span className="text-lg text-gray-700">Senior Student Developer @ Provo MTC</span>
+                <span className="text-lg text-gray-700">Senior Student Developer @ Brigham Young University</span>
                 <span className="text-sm text-gray-500">November 2024 - April 2024</span>
                 <span className="text-md text-gray-700">
                     Duties:
@@ -102,13 +105,13 @@ const Experience = () => {
                     </li>
                 </ul>
                 <hr className="border-gray-700 pb-4"/>
-                <span className="text-lg text-gray-700">Student Developer @ Provo MTC</span>
+                <span className="text-lg text-gray-700">Student Developer @ Brigham Young University</span>
                 <span className="text-sm text-gray-500">October 2022 - November 2023</span>
                 <span className="text-md text-gray-700">
                     Duties:
                     <br/>
                     Completed new features and maintained an employee web and android application. Full stack development
-                    from database to deployment, handling feature creation and bug fixes on every portion of our stack.
+                    from database to deployment, handling feature creation and bug fixes on every portion of the stack.
                 </span>
                 <span className="text-md text-gray-700 pt-4">Key Projects:</span>
                 <ul className="list-disc px-2 text-gray-600 pb-4">
@@ -133,7 +136,7 @@ const Experience = () => {
                     Worked in a 4-person team, using SCRUM led by a product manager to add animations to an Adobe graph
                     library (React Spectrum Charts). Used React.js and Typescript to create JSON specs for Vega
                     visualization. Created test cases and wrote unit tests with high levels of coverage.
-                    Product manager was a developer at Adobe and our work was integrated into their library after 1 semester.
+                    The product manager was a developer at Adobe and our work was integrated into their library after 1 semester.
                 </span>
 
                 <hr className="h-2 border-gray-700"/>
