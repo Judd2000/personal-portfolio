@@ -21,7 +21,7 @@ const Experience = () => {
                 </div>
             </div>
             <div className="w-full flex justify-center mt-5">
-                <span className="text-md text-gray-800 font-bold px-4 pb-4">NATHANIEL JUDD: FULL-STACK SOFTWARE DEVELOPER</span>
+                <span className="text-md text-gray-800 font-bold px-4 pb-4">NATHANIEL JUDD: SOFTWARE DEVELOPER & DEVOPS ENGINEER</span>
             </div>
             <hr className="border-gray-700 pb-4 mx-4"/>
 
@@ -36,22 +36,20 @@ const Experience = () => {
                 <hr className="h-2 border-gray-700"/>
                 <span className="text-lg text-gray-700 py-4">WORK EXPERIENCE:</span>
                 <hr className="border-gray-700 pb-4"/>
-                <span className="text-lg text-gray-700">Contract Full-Stack Developer @ Global Education Technologies</span>
+                <span className="text-lg text-gray-700">Software Application Developer @ Global Education Technologies</span>
                 <span className="text-sm text-gray-500">April 2024 - January 2026</span>
                 <span className="text-md text-gray-700">
                     Duties:
                     <br/>
-                    Worked as a contract full-stack developer, delivering and maintaining
-                    a new web and android application for volunteer management.
-                    Integrated chatbot features with Open AI, and performed all CI/CD tasks for the team,
-                    creating a streamlined and consistent deployment process.
+                    I worked as a full-stack developer, delivering and maintaining a new web and android application for volunteer management.
+                    I performed all CI/CD tasks for the team, creating a streamlined and consistent deployment process.
                 </span>
                 <span className="text-md text-gray-700 pt-4">Key Projects:</span>
                 <ul className="list-disc px-2 text-gray-600 pb-4">
                     <li>
-                        Created a robust in-app notification system allowing users to receive reminders about upcoming
-                        calendar events (React.js, TypeScript, Express.js, Azure DevOps Pipelines, Amazon EventBridge,
-                        AWS Lambda).
+                        Created an in-app notification system allowing users to receive reminders
+                        about upcoming calendar events
+                        (React.js, TypeScript, Express.js, Azure DevOps Pipelines, Amazon EventBridge, AWS Lambda).
                     </li>
                     <li>
                         Upgraded continuous delivery pipelines to run only when relevant code was merged, decreasing
@@ -66,12 +64,21 @@ const Experience = () => {
                         synchronization seamless across non-production and production lanes.
                     </li>
                     <li>
-                        Implemented microservice architecture between several frontends using module federation.
+                        Developed a federated web and mobile application using Rsbuild module federation,
+                        deploying several frontend web microservices to AWS via Azure DevOps and Terraform.
                     </li>
                     <li>
                         Created new features such as a feedback page supporting file uploads, a rating system for
                         AI-generated support messages for our application, and more (React.js, TypeScript, Express.js,
                         PostgreSQL).
+                    </li>
+                    <li>
+                        Leveraged GitHub Copilot with models like GPT-4 to accelerate development,
+                        create mock data and write test cases.
+                    </li>
+                    <li>
+                        Mentored several junior and student developers,
+                        pair programming and reviewing code for quality and style.
                     </li>
                 </ul>
                 <hr className="border-gray-700 pb-4"/>
@@ -80,10 +87,10 @@ const Experience = () => {
                 <span className="text-md text-gray-700">
                     Duties:
                     <br/>
-                    Promoted to a senior position after passing a special development test that involved creating an
-                    issue tracker web application from scratch to match given criteria in one sprint. Worked on migrating
-                    and maintaining existing codebases and fixing bugs on every part of our stack. Reviewed other's code
-                    for style, consistency and best practice, mentored other student developers and played an active role in deployment operations.
+                    I was promoted to a senior position after passing a special development test.
+                    I worked on migrating and maintaining existing code bases across the entire stack.
+                    I reviewed code for best practice, mentored other student developers,
+                    and played an active role in deployment operations.
                 </span>
                 <span className="text-md text-gray-700 pt-4">Key Projects:</span>
                 <ul className="list-disc px-2 text-gray-600 pb-4">
@@ -103,6 +110,10 @@ const Experience = () => {
                         Took over regular deployment to production, syncing changes several times a week via Github
                         Actions.
                     </li>
+                    <li>
+                        Pair programmed with junior student developers and regularly reviewed code,
+                        helping them learn company style and coding best practices.
+                    </li>
                 </ul>
                 <hr className="border-gray-700 pb-4"/>
                 <span className="text-lg text-gray-700">Student Developer @ Brigham Young University</span>
@@ -110,8 +121,9 @@ const Experience = () => {
                 <span className="text-md text-gray-700">
                     Duties:
                     <br/>
-                    Completed new features and maintained an employee web and android application. Full stack development
-                    from database to deployment, handling feature creation and bug fixes on every portion of the stack.
+                    I completed new features and maintained an employee web and android application. I operated as a
+                    full stack developer from the database to deployment pipelines,
+                    handling feature creation and bug fixes on every portion of the stack.
                 </span>
                 <span className="text-md text-gray-700 pt-4">Key Projects:</span>
                 <ul className="list-disc px-2 text-gray-600 pb-4">
@@ -123,6 +135,10 @@ const Experience = () => {
                         Upgraded a volunteer alert page for use at training centers with an interface for editing and
                         multi-language support (AngularJS, TypeScript, NestJS, PL/SQL, AWS).
                     </li>
+                    <li>
+                        Maintained Oracle Database tables, triggers and views,
+                        debugging and testing SQL queries and managing migrations with Liquibase.
+                    </li>
                 </ul>
                 <hr className="h-2 border-gray-700"/>
                 <span className="text-lg text-gray-700 py-4">EDUCATION:</span>
@@ -130,6 +146,14 @@ const Experience = () => {
                 <hr/>
                 <span className="text-md text-gray-700">Computer Science (BS) @ Brigham Young University (Emphasis in Software Engineering), Minor in Spanish</span>
                 <span className="text-sm text-gray-500">September 2020 - April 2024</span>
+
+                <span className="text-md text-gray-700 pt-2">
+                    I learned advanced Java development, deep understanding of testing methodoligies and frameworks
+                    using Mockito, JUnit and more. I gained hands-on experience with Spring Boot,
+                    Android Studio and deployment to AWS using Terraform.
+                </span>
+
+                <span></span>
                 <br/>
                 <span className="text-md text-gray-700 font-bold">Capstone Project:</span>
                 <span className="text-md text-gray-700 pb-6">
